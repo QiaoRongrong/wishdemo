@@ -1,0 +1,36 @@
+group 'com.j8'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile 'com.rabbitmq:amqp-client:3.5.1'
+    //compile 'org.springframework.amqp:spring-rabbit:1.6.5.RELEASE'
+    compile 'org.springframework.amqp:spring-rabbit:1.3.6.RELEASE'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile 'com.google.guava:guava:19.0'
+
+    testCompile 'junit:junit:4.11'
+}
+
+ext{
+    def name = 'Jory qiao'
+}
+task hello {
+
+    println 'hello gradle task...' + name
+    def propMap = project.getProperties()
+    propMap.each {
+        println it
+    }
+
+}
