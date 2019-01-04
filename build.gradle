@@ -1,11 +1,22 @@
-group 'com.j8'
-version '1.0-SNAPSHOT'
+
 
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
 
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+group = 'com.qr'
+version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
     mavenCentral()
 }
 
@@ -19,6 +30,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.guava/guava
     compile 'com.google.guava:guava:19.0'
 
+    compile 'org.projectlombok:lombok:1.18.4'
     testCompile 'junit:junit:4.11'
 }
 

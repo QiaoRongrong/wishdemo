@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.retry/spring-retry/1.1.0.RELEASE/f7e1ec1fd7c8fcaca490fd298c5b3fe711cb5ed9/spring-retry-1.1.0.RELEASE.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.retry/spring-retry/1.1.0.RELEASE/3ccfea3e37d38eca4b6252ddfbf0e34084ed0696/spring-retry-1.1.0.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.retry/spring-retry/1.1.0.RELEASE/a4d1f3efa56fb5de5cdeea665b2d0e6137925803/spring-retry-1.1.0.RELEASE-sources.jar!/" />
     </SOURCES>
