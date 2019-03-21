@@ -1,0 +1,5 @@
+INSERT INTO `haier`.`eb_agreement_information` (`id`, `protocol_type`, `protocol_name`, `protocol_version`, `protocol_content`, `protocol_content_ciphertext`, `effective_flag`, `notes`, `create_date`, `create_time`, `core_ent_id`, `global_flag`, `bl_ent_id`, `sequence`, `modify_date`, `modify_time`, `bus_range`) VALUES ('59', '19', '电子签约授权确认书', 'version 1.0',
+
+'<p>电子签章启用确认</p>\r\n<div style=\"margin: auto; width: 65%;\">\r\n<p style=\"color: rgb(51, 51, 51); line-height: 24px; letter-spacing: 2px; overflow: hidden; font-size: 14px; font-weight: normal; -ms-word-break: break-all; -ms-word-wrap: break-word;\">尊敬的用户，平台已启用电子签章服务。贵司在平台签署电子合同或文件时，除UKEY证书进行数字签名外，同时还将使用电子签章完成线上电子合同或文件的签署。该电子签章可在下载的PDF文件中展现并能直接点击查看签名相关信息。</p>\r\n<p>贵司加盖电子签章的电子合同或文件，是贵司确认其真实、合法、有效的体现，对贵司具有确定的法律效力。</p>\r\n<p>启用电子签章，需要贵司通过UKEY签名，授权并委托平台向合作的电子认证服务机构（简称为“CA机构”）申请，并与贵司的数字证书进行绑定。</p>\r\n</div>',
+
+ 'ADCC8FED1CE6F78F7BAA761177173F23', '1', NULL, '20180731', '120000', NULL, '0', NULL, '1', '20180818', NULL, NULL);

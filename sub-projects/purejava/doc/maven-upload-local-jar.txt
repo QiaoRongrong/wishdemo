@@ -1,0 +1,23 @@
+
+// upload local jar to Nexus
+mvn deploy:deploy-file -DgroupId=my.group.id \
+    -DartifactId=my-artifact-id \
+    -Dversion=1.0.0.1 \
+    -Dpackaging=jar \
+    -Dfile=foo.jar \
+    -DgeneratePom=true \
+    -DrepositoryId=my-repo \
+    -Durl=http://my-nexus-server.com:8081/repository/maven-releases/
+
+// --------- example ------org.sfm--------
+-DrepositoryId=releases
+
+D:\dev\m2\repository\org\sfm\org.sfm.beans\1.0.0\org.sfm.beans-1.0.0.jar
+
+mvn deploy:deploy-file -DgroupId=org.sfm -DartifactId=org.sfm.beans -Dversion=1.0.0 -Dpackaging=jar -Dfile=D:\dev\m2\repository\org\sfm\org.sfm.beans\1.0.0\org.sfm.beans-1.0.0.jar -DgeneratePom=true -DrepositoryId=releases -Durl=http://47.98.238.219:8081/repository/maven-public/
+
+
+mvn deploy:deploy-file -DgroupId=cn.topca -DartifactId=top-certapi -Dversion=1.0 -Dpackaging=jar -Dfile=D:\dev\m2\repository\cn\topca\top-certapi\1.0\top-certapi-1.0.jar -DgeneratePom=true -DrepositoryId=releases -Durl=http://47.98.238.219:8081/repository/maven-public/
+
+
+
