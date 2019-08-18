@@ -20,10 +20,10 @@ public class MyThreadLocal {
     };
 
     public static void main(String[] args) {
-        new Thread(new MyIntegerTask("IntegerTask1")).start();
-        new Thread(new MyStringTask("StringTask1")).start();
-        new Thread(new MyIntegerTask("IntegerTask2")).start();
-        new Thread(new MyStringTask("StringTask2")).start();
+        new Thread(new MyIntegerTask("Integer-Task-1")).start();
+        new Thread(new MyStringTask("String-Task-1")).start();
+        new Thread(new MyIntegerTask("Integer-Task-2")).start();
+        new Thread(new MyStringTask("String-Task-2")).start();
     }
 
     public static class MyIntegerTask implements Runnable {
@@ -40,11 +40,11 @@ public class MyThreadLocal {
                 if (null == MyThreadLocal.threadLocal.get()) {
                     // ThreadLocal.et方法设置线程变量
                     MyThreadLocal.threadLocal.set(0);
-                    System.out.println("线程" + name + ": 0");
+                    System.out.println("    线程" + name + ", set to: 0");
                 } else {
                     int num = (Integer) MyThreadLocal.threadLocal.get();
                     MyThreadLocal.threadLocal.set(num + 1);
-                    System.out.println("线程" + name + ": " + MyThreadLocal.threadLocal.get());
+                    System.out.println("    线程" + name + ", set to: " + MyThreadLocal.threadLocal.get());
                     if (i == 3) {
                         MyThreadLocal.threadLocal.remove();
                     }
@@ -71,11 +71,11 @@ public class MyThreadLocal {
             for (int i = 0; i < 5; i++) {
                 if (null == MyThreadLocal.threadLocal.get()) {
                     MyThreadLocal.threadLocal.set("a");
-                    System.out.println("线程" + name + ": a");
+                    System.out.println("    线程" + name + ", set to: a");
                 } else {
                     String str = (String) MyThreadLocal.threadLocal.get();
                     MyThreadLocal.threadLocal.set(str + "a");
-                    System.out.println("线程" + name + ": " + MyThreadLocal.threadLocal.get());
+                    System.out.println("    线程" + name + ", set to: " + MyThreadLocal.threadLocal.get());
                 }
                 try {
                     Thread.sleep(800);
