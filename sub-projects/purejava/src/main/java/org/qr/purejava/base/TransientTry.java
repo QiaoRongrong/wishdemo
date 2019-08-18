@@ -29,6 +29,8 @@ public class TransientTry {
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("nameStore"));
         NameStore nameStore1 = (NameStore)inputStream.readObject();
         System.out.println(nameStore1);
+
+        System.out.println("Origin name store object is: " + nameStore);
     }
 }
 
